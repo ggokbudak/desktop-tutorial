@@ -1,0 +1,80 @@
+/// SQL Dosyası
+
+
+-- phpMyAdmin SQL Dump
+-- version 5.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Anamakine: 127.0.0.1
+-- Üretim Zamanı: 19 Tem 2021, 12:12:41
+-- Sunucu sürümü: 10.4.11-MariaDB
+-- PHP Sürümü: 7.4.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Veritabanı: `nereyeatayim`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `expertiz_list`
+--
+
+DROP TABLE IF EXISTS `expertiz_list`;
+CREATE TABLE `expertiz_list` (
+  `id` int(11) NOT NULL,
+  `arac_id` int(11) NOT NULL,
+  `resim` text NOT NULL DEFAULT '',
+  `aciklama` text NOT NULL DEFAULT '',
+  `malzeme_cinsi` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `ex_sebeb1` int(11) NOT NULL,
+  `ex_miktar1` int(11) NOT NULL,
+  `ex_sebep2` int(11) NOT NULL DEFAULT 0,
+  `ex_miktar2` int(11) NOT NULL DEFAULT 0,
+  `ex_sebep3` int(11) NOT NULL DEFAULT 0,
+  `ex_miktar3` int(11) NOT NULL DEFAULT 0,
+  `total` int(11) NOT NULL,
+  `time` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dökümü yapılmış tablolar için indeksler
+--
+
+--
+-- Tablo için indeksler `expertiz_list`
+--
+ALTER TABLE `expertiz_list`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
+--
+
+--
+-- Tablo için AUTO_INCREMENT değeri `expertiz_list`
+--
+ALTER TABLE `expertiz_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+
+
+Yeni Bir Tablo olışturucaz. expertiz_list diye. Öne Tanımlı değerler yukarıda var. 
+
+
+2 Yeni İzin Oluşturucaz
+
+ID 77 - Expertiz İzinleri
+ID 78 - Expertiz Oluşturabilir
+
+
+
+
+
